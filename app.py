@@ -149,9 +149,6 @@ def handle_eliminar_sala(data):
 
 
 if __name__ == "__main__":
-    host = "0.0.0.0"
-    port = 3000
-    
-    app.run(host=host, port=port)
+    socketio = SocketIO(app, host='0.0.0.0', port=5000, secure=True)
     
 # Proyecto web finalizado :)
