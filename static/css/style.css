@@ -1,0 +1,636 @@
+@font-face {
+  font-family: "Poppins_bold";
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins_medium";
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  justify-content: space-between;
+  height: 95vh;
+  background-color: aliceblue;
+}
+
+header, footer {
+  display: flex;
+  flex-direction: column;
+  line-height: 5px;
+}
+header h1, footer h1 {
+  font-family: "Poppins_bold";
+  font-size: 150%;
+}
+header h2, footer h2 {
+  font-family: "Poppins_medium";
+  font-weight: 100;
+  font-size: 80%;
+}
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.presentacion .presentacion-icono {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.presentacion .presentacion-icono .informacion {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 15px;
+}
+.presentacion .presentacion-inicio {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 800px) {
+  .presentacion .presentacion-inicio {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+.presentacion .presentacion-inicio .logo {
+  margin-right: 5%;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 800px) {
+  .presentacion .presentacion-inicio .logo {
+    margin-right: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+.presentacion .presentacion-inicio input[type=text] {
+  width: 100%;
+  font-family: "Poppins_medium";
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  border-radius: 5px;
+  border: none;
+  height: 4vh;
+  background-color: #ECECEC;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.presentacion .presentacion-inicio .registro {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 800px) {
+  .presentacion .presentacion-inicio .registro {
+    width: 80%;
+  }
+}
+.presentacion .presentacion-inicio .registro .ingresar {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.presentacion .presentacion-inicio .registro h1 {
+  font-family: "Poppins_bold";
+  font-size: 160%;
+}
+.presentacion .presentacion-inicio .registro h2 {
+  font-family: "Poppins_medium";
+  font-weight: 100;
+  font-size: 90%;
+}
+.presentacion h1 {
+  font-family: "Poppins_bold";
+  font-size: 150%;
+}
+.presentacion h3 {
+  font-family: "Poppins_medium";
+  font-weight: 100;
+  font-size: 100%;
+}
+.presentacion .ingresar button {
+  font-family: "Poppins_bold";
+  background: none;
+  border: none;
+  color: #CB6CE6;
+  font-size: 100%;
+}
+.presentacion .ingresar button:disabled {
+  font-family: "Poppins_bold";
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 100%;
+}
+
+.main_room {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.main_room .create-room-options {
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+.main_room .create-room-options h1 {
+  margin-left: 4%;
+  font-family: "Poppins_bold";
+}
+.main_room .create-room-options h3 {
+  justify-content: left;
+  font-family: "Poppins_bold";
+  color: red;
+}
+.main_room .create-room-options .create-options {
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 950px) {
+  .main_room .create-room-options .create-options {
+    width: 90%;
+    height: 40%;
+  }
+}
+.main_room .create-room-options .create-options form {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.main_room .create-room-options .create-options input[type=text] {
+  padding-left: 2%;
+  width: 90%;
+  font-family: "Poppins_medium";
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  margin-bottom: 2%;
+  background-color: #ECECEC;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.main_room .create-room-options .create-options input[type=text]:focus {
+  outline: 1px solid black;
+}
+.main_room .create-room-options .create-options button {
+  font-family: "Poppins_bold";
+  background: none;
+  border: none;
+  color: #CB6CE6;
+  font-size: 100%;
+}
+.main_room .create-room-options .create-options button:disabled {
+  font-family: "Poppins_bold";
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 100%;
+}
+.main_room .rooms {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.main_room .rooms .all-rooms, .main_room .rooms .all-rooms-mini {
+  border: solid 1px black;
+  margin-top: 1%;
+  padding: 0 1% 1% 1%;
+  width: 30%;
+  height: 92%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(180, 180, 180, 0.5);
+}
+@media (max-width: 950px) {
+  .main_room .rooms .all-rooms, .main_room .rooms .all-rooms-mini {
+    height: 97%;
+    width: 100%;
+  }
+}
+.main_room .rooms .all-rooms .create-rooms, .main_room .rooms .all-rooms-mini .create-rooms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_room .rooms .all-rooms h1, .main_room .rooms .all-rooms-mini h1 {
+  margin-left: 2%;
+  font-family: "Poppins_bold";
+}
+.main_room .rooms .all-rooms button, .main_room .rooms .all-rooms-mini button {
+  font-family: "Poppins_medium";
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 100%;
+}
+.main_room .rooms .all-rooms .search_bar, .main_room .rooms .all-rooms-mini .search_bar {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10%;
+}
+.main_room .rooms .all-rooms .search_bar input[type=text], .main_room .rooms .all-rooms-mini .search_bar input[type=text] {
+  width: 100%;
+  font-family: "Poppins_medium";
+  padding-left: 2%;
+  border-radius: 5px;
+  border: none;
+  height: 150%;
+  background-color: #ECECEC;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.main_room .rooms .all-rooms .search_bar input[type=text]:focus, .main_room .rooms .all-rooms-mini .search_bar input[type=text]:focus {
+  outline: 1px solid black;
+}
+.main_room .rooms .all-rooms .all-room-access, .main_room .rooms .all-rooms-mini .all-room-access {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view, .main_room .rooms .all-rooms-mini .all-room-access .room-view {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  line-height: 2px;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view .all-room-image, .main_room .rooms .all-rooms-mini .all-room-access .room-view .all-room-image {
+  display: flex;
+  margin-right: 2%;
+  margin-left: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view .all-room-image img, .main_room .rooms .all-rooms-mini .all-room-access .room-view .all-room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view .room-information, .main_room .rooms .all-rooms-mini .all-room-access .room-view .room-information {
+  margin-left: 2%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view .room-information h3, .main_room .rooms .all-rooms-mini .all-room-access .room-view .room-information h3, .main_room .rooms .all-rooms .all-room-access .room-view .room-information h4, .main_room .rooms .all-rooms-mini .all-room-access .room-view .room-information h4 {
+  font-family: "Poppins_medium";
+  font-size: 100%;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view .room-information h4, .main_room .rooms .all-rooms-mini .all-room-access .room-view .room-information h4 {
+  font-family: Calibri;
+  color: gray;
+}
+.main_room .rooms .all-rooms .all-room-access .room-view:hover, .main_room .rooms .all-rooms-mini .all-room-access .room-view:hover {
+  background-color: rgb(229, 229, 229);
+}
+.main_room .rooms .all-rooms .user_info, .main_room .rooms .all-rooms-mini .user_info {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_room .rooms .all-rooms .user_info .user-options, .main_room .rooms .all-rooms-mini .user_info .user-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+.main_room .rooms .all-rooms .user_info .user-options h2, .main_room .rooms .all-rooms-mini .user_info .user-options h2 {
+  font-family: "Poppins_bold";
+}
+.main_room .rooms .all-rooms .user_info .user-options .profile_image, .main_room .rooms .all-rooms-mini .user_info .user-options .profile_image {
+  display: flex;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.main_room .rooms .all-rooms .user_info .user-options .profile_image img, .main_room .rooms .all-rooms-mini .user_info .user-options .profile_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_room .rooms .all-rooms .user_info .open-close, .main_room .rooms .all-rooms-mini .user_info .open-close {
+  width: 12%;
+  justify-content: end;
+  margin-right: 2%;
+}
+.main_room .rooms .all-rooms .user_info .open-close img, .main_room .rooms .all-rooms-mini .user_info .open-close img {
+  width: 35px;
+}
+.main_room .rooms .all-rooms-mini {
+  width: 100%;
+  height: 95%;
+}
+.main_room .rooms .all-rooms-mini .user_info {
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1%;
+  gap: 4px;
+}
+.main_room .rooms .all-rooms-mini .user_info .user-options {
+  display: flex;
+  justify-content: space-between;
+}
+.main_room .rooms .all-rooms-mini .user_info .user-options h2 {
+  font-family: "Poppins_bold";
+}
+.main_room .rooms .all-rooms-mini .user_info .user-options .profile_image {
+  display: flex;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  overflow: hidden;
+}
+.main_room .rooms .all-rooms-mini .user_info .user-options .profile_image img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.main_room .rooms .all-rooms-mini .user_info .open-close {
+  width: 12%;
+  justify-content: end;
+  margin-right: 0.1%;
+}
+.main_room .rooms .all-rooms-mini .user_info .open-close img {
+  width: 40px;
+}
+.main_room .rooms .chat-menu {
+  border: solid 1px black;
+  margin-top: 1%;
+  padding: 0 1% 1% 1%;
+  margin-left: 1%;
+  width: 70%;
+  height: 92%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(180, 180, 180, 0.5);
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    height: 97%;
+  }
+}
+.main_room .rooms .chat-menu h1 {
+  font-size: 200%;
+  font-family: "Poppins_bold";
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu h1 {
+    font-size: 160%;
+  }
+}
+.main_room .rooms .chat-menu h2, .main_room .rooms .chat-menu h3 {
+  font-size: 100%;
+  font-family: "Poppins_bold";
+}
+.main_room .rooms .chat-menu h4 {
+  font-size: 80%;
+  font-family: "Poppins_medium";
+  color: gray;
+}
+.main_room .rooms .chat-menu p {
+  font-family: "Poppins_medium";
+  font-size: 90%;
+}
+.main_room .rooms .chat-menu .chat-void {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu .chat-void {
+    flex-direction: column;
+  }
+  .main_room .rooms .chat-menu .chat-void div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main_room .rooms .chat-menu .conversation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_room .rooms .chat-menu .conversation .room-info {
+  display: flex;
+  align-items: center;
+  line-height: 2px;
+  border-bottom: 1px solid black;
+}
+.main_room .rooms .chat-menu .conversation .room-info .all-room-image {
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  overflow: hidden;
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu .conversation .room-info .all-room-image {
+    height: 60px;
+    width: 60px;
+    margin-left: 2%;
+  }
+}
+.main_room .rooms .chat-menu .conversation .room-info .all-room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_room .rooms .chat-menu .conversation .room-info .room-info-name {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1%;
+  background-color: whitesmoke;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages .message, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 2%;
+  gap: 10px;
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages .message .all-room-image, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .all-room-image {
+  margin-left: 10px;
+  display: flex;
+  width: 55px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu .conversation .room-content-messages .message .all-room-image, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .all-room-image {
+    height: 30px;
+    width: 35px;
+  }
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages .message .all-room-image img, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .all-room-image img {
+  max-width: 50px;
+  max-width: 50px;
+  object-fit: cover;
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages .message .external-message-info, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .external-message-info {
+  width: 100%;
+  display: flex;
+  padding-top: 2%;
+  margin-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  flex-direction: column;
+  justify-content: right;
+  background-color: rgb(196, 255, 196);
+  border-radius: 10px;
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages .message .external-message-info h2, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .external-message-info h2, .main_room .rooms .chat-menu .conversation .room-content-messages .message .external-message-info h4, .main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .external-message-info h4 {
+  display: flex;
+  line-height: 0;
+}
+.main_room .rooms .chat-menu .conversation .room-content-messages .message-emisor .external-message-info {
+  background-color: rgb(205, 242, 255);
+}
+.main_room .rooms .chat-menu .conversation .send-message-options {
+  align-items: center;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  padding-top: 1%;
+}
+.main_room .rooms .chat-menu .conversation .send-message-options button {
+  height: 100%;
+  width: 10%;
+  background: none;
+  border: none;
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu .conversation .send-message-options button {
+    width: 18%;
+    height: 70%;
+  }
+}
+.main_room .rooms .chat-menu .conversation .send-message-options button img {
+  width: 100%;
+  height: 100%;
+}
+.main_room .rooms .chat-menu .conversation .send-message-options input[type=text] {
+  width: 80%;
+  font-family: "Poppins_medium";
+  padding-left: 1%;
+  border-radius: 5px;
+  border: none;
+  height: 80%;
+  background-color: #ECECEC;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+@media (max-width: 950px) {
+  .main_room .rooms .chat-menu .conversation .send-message-options input[type=text] {
+    margin-left: 1%;
+  }
+}
+.main_room .rooms .chat-menu .conversation .send-message-options input[type=text]:focus {
+  outline: 1px solid black;
+}
+
+footer {
+  padding-bottom: 2%;
+}
+
+.void {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(95, 95, 95);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */

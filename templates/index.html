@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flack</title>
+
+    <!-- Librería de SocketIO para el cliente. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename = 'icons/Icon.svg') }}" type="image/x-icon">
+
+</head>
+<body>
+
+    <header id="header">
+        <h1>DTCarlox77</h1>
+        <h2>Carlos Adrián Espinosa Luna</h2>
+    </header>
+
+    <div class="presentacion" id="menu-1">
+        
+        <div class="presentacion-icono" id="presentation">
+            <div class="logo">
+                <img src="{{ url_for('static', filename = 'icons/Flack-icon.svg') }}" alt="">
+            </div>
+            <div class="informacion">
+                <h1>Bienvenido(a) a Flack</h1>
+                <h3>Project 2: Flack / CS50W</h3>
+            </div>
+            <div class="ingresar" id="next">
+                <button id="register">SIGUIENTE ⮞</button>
+            </div>
+        </div>
+
+        <div class="void" id="login">
+            <div class="logo" id="back-presentation">
+                <img src="{{ url_for('static', filename = 'icons/Flack-tittle.svg') }}" alt="">
+            </div>
+
+            <div class="registro">
+                <div class="informacion">
+                    <h1>Bienvenido(a) a Flack</h1>
+                    <h3 id="username-validation">Ingresa un nombre de usuario:</h3>
+
+                    <input type="text" id="username" required>
+
+                    <h3>URL de imagen de perfil (Opcional):</h3>
+                    <input type="text" id="profile-image">
+                </div>
+                <div class="ingresar">
+                    <button id="login-button" disabled>INGRESAR ⮞</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="main_room" id="menu-2" style="display: none;">
+        <div class="create-room-options" id="background-container" style="display: none;">
+            <div class="create-options" id="create-options">
+                <h1>Crear sala</h1>
+                <form>
+                    <h3 id="mensaje-crear-sala"></h3>
+                    <input type="text" id="room-name" placeholder="Nombre de la sala">
+                    <input type="text" id="room-image" placeholder="URL de imagen (opcional)">
+                    <button id="create-room-button" disabled>Crear</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="rooms">
+            <div class="all-rooms" id="all-rooms">
+                <div class="user_info">
+                    <div class="user-options">
+                        <div class="profile_image">
+                            <img src="" alt="Imagen" id="imagen-perfil-usuario">
+                        </div>
+                        <h2 id="user-username"></h2>
+                    </div>
+                </div>
+
+                <div class="create-rooms">
+                    <h1>Salas</h1>
+                    <button id="create-room">Crear sala</button>
+                </div>
+
+                <div class="search_bar">
+                    <input type="text" id="search-room" placeholder="Buscar salas">
+                </div>
+
+                <div class="all-room-access" id="room-elements">
+                    <!-- Acá se agregarán las salas de forma automática. -->
+                </div>
+            </div>
+
+            <div class="chat-menu" id="chat-menu">
+                <div class="conversation" style="display: none;" id="contenedor-de-chats">
+                    <div class="room-info" id="exit-room">
+                        <div class="all-room-image">
+                            <img src="https://i.pinimg.com/1200x/a4/0f/3d/a40f3db39370251001ba29f5f24aa29c.jpg" alt="" id="imagen-de-sala">
+                        </div>
+                        <div class="room-info-name">
+                            <h1 class="room-name" id="nombre-de-sala">Nombre de la sala</h1>
+                            <h3>Creada por: <span id="creador-de-sala" class="room-creator">Nombre del creador</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="room-content-messages">
+                        <!-- Acá irán todos los mensajes de la sala. -->
+                    </div>
+
+                    <div class="send-message-options">
+                        <input type="text" id="mensajeInput" placeholder="Escribe tu mensaje">
+                        <button id="enviarMensajeBtn"><img src="{{ url_for('static', filename = 'icons/send-icon.svg') }}" alt=""></button>
+                    </div>
+                </div>
+            
+                <div class="chat-void" id="show-all-rooms">
+                    <img src="{{ url_for('static', filename = 'icons/Flack-tittle.svg') }}" alt="">
+                    <div>
+                        <h1>Bienvenido(a) Flack</h1>
+                        <p>Crea o únete a una sala y comienza la diversión :)</p>
+                        <p>Project 2 CS50W</p>
+
+                        <p class="mensaje-telefono">Haz click para continuar.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <h1>CS50W</h1>
+        <h2>Project 2</h2>
+    </footer>
+    
+    <script src="{{ url_for('static', filename = 'javascript/script.js' )}}"></script>
+    <script src="{{ url_for('static', filename = 'javascript/responsive.js' )}}"></script>
+</body>
+</html>
