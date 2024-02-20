@@ -1,8 +1,16 @@
-// Esto evitará mostrar salas creadas en una versión anterior.
 let salaActual = "";
 
-// Conexión al socket. Si desea probar la aplicación a través de un puerto, cambie el protocolo http a https para no tener inconvenientes.
-const socket = io.connect("https://flack-qwxt.onrender.com/");
+// Obtener el protocolo actual (http o https) de la URL completa
+const protocolo = window.location.protocol;
+
+// Obtener el dominio y puerto actual de la URL completa
+const dominio = window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+
+// Construir la URL completa del socket con el protocolo, dominio y puerto actuales
+const socket_url = `${protocolo}//${dominio}`;
+
+// Conectar al socket
+const socket = io.connect(socket_url);
 
 // Mantiene un control del máximo de mensajes en una sala (Se asignó que el máximo debe ser de 100).
 const MAX_MESSAGES = 100;
