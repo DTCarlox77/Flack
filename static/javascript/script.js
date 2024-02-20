@@ -102,11 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Restricciones al nombre de usuario. (Algunos para evitar fallos visuales).
     username.addEventListener("input", () => {
         login_button.disabled = true;
-        if (username.value.length < 5 && username.value.length > 0) {
+        if (username.value.length < 2 && username.value.length > 0) {
             username_message.textContent = "El nombre de usuario es muy corto.";
         } else if (!/^[a-zA-Z0-9]+$/.test(username.value)) {
             username_message.textContent = "El nombre de usuario no es válido.";
-        } else if (username.value.length > 8) {
+        } else if (username.value.length > 12) {
             username_message.textContent = "El nombre de usuario muy largo.";
         } else {
             username_message.textContent = "Ingresa un nombre de usuario:";
